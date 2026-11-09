@@ -1,0 +1,225 @@
+--[[ NuvoVM / Lua 5.4 | randomized register VM
+ ; : ! , \" ` , ' ; + - _ ++ // 92828888 x1028 100328
+Original educational VM format; not Luraph source code.
+]]
+return (function()
+  local _nuvoVM = {
+    [1] = 60031070, [2] = 2810, [3] = 33,
+    [4] = 2, [5] = "e51586fa",
+    [6] = "$:F=QHV-'NHRFpZHRE4]Hf*g_3*=4RHEc/+>IOx0AX7hF53;Td&7\">5F,G%x8u=\"R.6zG3;A_3M&;af@Ed90r.Ytq{Hw_\\J cQA9&2!]R3DeQ($6K4$N@-RU\"[AUu&Cj?LM{!HQ$&MSM#MaR9Moj^T&2{+,;Gs@9E_53fI{\\[o5d}sQ&?~nN%0TjfRf]@o$FP^nPHGe:&=ZvmRu_IA:NlRk$xxnH4NP^p&BBWI9Uj&)'ww`F:mqXxOs]ZP&@x5jHEcvR;#T\\^%^4-P!hKLL&:aa>RNSZS2&^#\\3*;6p0z4}Y&>;tJ3Dg\\\")j#J>\"SIQw?'j#Z&<=#/><sPI+4qbc)eW69,Ym*0&9kOM)c#=[MSqDF$bn^lC4>\\ &8_@)EwoL:1e/p;F+(GB'E^w^&?~X-QrlDL+dM`u,}i&,0\\m9`&9gcFBH0tZDwIy=-9l@~!<@cv&: =sSQBfwD&1rd:ktm(J.SAD&2{f:<7-N;=6D@f@#6C.IEmW/&1X6wJ$4{_KbP7%EnbA&5Soan&6'9%O2Gm*43g*yHI(By!mL<8&9(hP$Tr/UB/refPy`7~)%l,N&@gmfOYWiR>\\p*,G^</h)U]_K&?BsCB!*)?'L+k<).m#YA0xYR&CyJxRb(]dP.;0~C?)teKB\"En&:,l3NVg?D304v%T3MfV4PHxG&DF[AD:@z&QV+^8;<jI>Sv eE&:N;u+h`NEPsaf6'b!;sNVP}p&=e!yD&cnQ&~\"JrEGB@^\"PH>z&4^\"UR'B:X,p#Cw(,E^[>^Ph+&6u`{P!f-eDne,W1gfvd/aJ&v&?U?|4GY%'RQT-;:3{rNDrmq:&51k=4GZ'B3?^fw;ve$8$YFnB&1O%<H2'8g5+:8Q51h3E)SKW~&?rhYT@[9-G<pn#!`&>U\"R!pp&:;W!!L;/K*AaLE+C+}(Fe.CF&5hZI311F46M5WX&%iBv.s!e,&BAjiL)s|1LGaYQJ&z99./&Kx&>5n+MSq2(C8QLQ,IRz#:\"*(f&:1+i#>KH7C;eJM/( g^CrT37&CD>y\"bf52?8x@L--hG]TdR4c&:;xSL=P2q2kgR*-'Q;bQ57b2&8*3A3X9XJ\"EG-L-#q,O0OLbq&?.[ES*8dsNb(4]&F7m44|kt7&@N7!/`R-d;8]pe5u\"/K(2>|I&6lGl=MW-(-|^bELuQqGT L[@&2ABmQ8,-uMpg7B)2BGlSe,T4&D*w`)c$(>0 X U:j`p>C0LO8&A\"3 N}pB_!S/&e\"Vg1\\7;i5c&=f&q>)7y=H*|iY0&103?pjK,&?QbV&n),b)f4@xOZNb]A#1g\"&<\"cM#>HX43J;)X+4@y 3B-Gn&7S7J$A8biTQ*x&)4j.MIaFGF&>om+N/Xm1)3DEC%&_hH!1kRN&1'Ud6tG53!9M/A1hu8x.\\kfj&:w*ACr.5<?k~)-'6{/a+-]:R&ApK]5JI0c2*TCDHS bkJvxy/&C*vJ/%j;p'%C/q+|QUsH!=6P&:,MM)OLT>P/mGw@LT1G6T+?H&4wLg#>H&;>}?;lSO|qo@a?1A&1Et!AEF!*H:#?SS=Lzv52eZK&AsM#<qu`T=!I]z4[z +-!BwJ&7h9C&FweG.LBU+CCv\\DSF\\,Y&B`#[EPgT<8drjo)WfF,L$*C~&:v?vIoaj0/.z K=dv6eS ?*V&3cKM!sF`(PUz|B=6nC,RoN,.&8q(h6&+!73$4n'SzHqn ~ih7&=zXD2|W/oQb$MMC]L's4'Ae1&65j2!%0z>@w6bxLa-`&\"HiN7&=9c)L)t/[*>c:\"1<Z1@FFRCl&>M6UO2LHzD}\\+n/+z3sGd j?&DQcD#Q|DX?bt{?K-Oc4FsLy[&:*[M?,)2,A$bC;>H[+8;tBT[&63.;8+jYbRz%k^;MJlR0X)8Q&2[rpSQ?/N<SktR@vEN=<iZF2&6j`uGi|C%\"M,W&9TbW.B*jva&559^<#X~/\"_[s\"G|4 _D7g/x&8].Q IN~4*~Y}h)2ic!LIHxA&@=:\",DJCM&{:\"[D%+rF9 ZeH&Bgq/#Q{j{+T$H~A$g*dTAuC`&?7xUF?}^wI`VA+?S}]25s.FP&54`r9i@8,@VC4h>`y?F:E'{Y&<<mB:l07x7<#vN:m<,ASc(tV&;z.j-Zq\\q'7\"WQ&\"Le3(+BI:&B^3@!8cl$CBhPK?A=0S\"UGdt&=z#%Fzf3pAAn\"v5%:QE/:^@c&;~/^Sdz;DHz(TD.Ob'$8~k Y&:sz3Ku?^,?RDK&5h+hn7'l5Y&?,`I@.}{[([H:i!3VoiF-gJM&3+yq 5sI~Q,Z[%C~]D`N\\A46&5V XF,I1&\"ovWbO7|S}@~vy9&Ch~@6&+2eL?I?L0HQbg+A%d[&6`z*:E':[>OSVl@$/uH20&g|&<BTbRu^U^<^sm=1U@S5-Hz6J&>1l~7w7+@=c7u)!7n%K'F4U>&A$56;Gv7.7\"mV6S-hAq6?'+&&>3HEAXux+Qs(mDD\"1!,8[*j_&2DI!@V(7f#V(A?1vF)FT`D|X&A&Ff,DFgDK/4byR=]8$&N2ki&?McE8+lv]C`*|tH(RT \"y$h<&?)SMK'$P5@gV)UK}<`t\",$$%&1z'V#eUofSkj&0Ryk[UOhv&<&@0Y1);rW;Cle-$({#d2+\"YjT&={ Y(sh2S@moSq5jj/X)] %N&=_E&%D-9|Fq+VeApr]xR;IE|&C[*iEPav\\B@D7>Mub#g-.K8*&B_L`B!&$q1kI<.&+A_!3N\"p]&CMM*KN5Y<2^YQ)HmDr1@O$yA&@dMfM{\"m+7xeY]Iis?* O9Hq&5]hT/L{)i?1u8i+$8{Z.`<CE&2Ob(M@@_j!k aU46Epk !+V\"&9%t{+U*yW@mvlZ=nezDFfyaa&>5jG*>fZK6V02;TIsuu?r1W[&<Y5v>);%+:Qy7vL[1_;'a>fj&9I>+0(\\@w:~9}0DG6}H!aDrs&:DzV,DG#-=H#h6#s~'7!Zv>a&2nh2><p9LCv|2p0a?iY(: i$&5y5_I4xmK'ij;2!VaDVF|Tf[&5%2J4[0jJ.5f+N+`}8nPZ}kf&BEZ;D&cy%QWs`B<42[??:j'G&54-RSxPgp!mvYX<~qsb<iCaY&>A}O);u&c$lO2*D=#)}.`*:G&DRu@,X!a^LhU(%0J{ZwPYMK#&4f_=${z=l*+;ow@# )j+#3Ry&?]h[/t)ezR0Js5)j*3(2Ds4&&1,4;2Atn&(Sj+LKB$&7;1 Mg&6+!3%k3lS<?Zo -/&[uR+}0a&22AE.6Tv-1`e`' |0k5B>d[s&?uP;(`/%)'+?VG*Pye0RJ\\S^&C1hjC7Kwt)V(.]Ee=\"#*-h\\>&>5(DK'%/{N*X:T4_ex\\IFA.~&7}ArQrkkR.L|]j5CIk.HM`$w&6N-RDMuflR87SW)JUC-L?q0B&4Fzk']>pvJS3gr5}MUNOeW7|&5QPsOYS\"FEb:_,5bukACO6Iu&9^W6@BOQ,&R5R\\=Z)~p5AM(d&9z~jDMv|}9Sa)W9Q.v>#ky2n&2(3Y*>dJG#HjnWF/Zo<F(KNr&30DcGj !5%1]v6H)P2! b+LO&9Up<7<PK{>7wfu6ID/|1*isl&8sp2Du%5.Ec+Sa6zcF%!Fh0$&;6j{ ]#RA0;@VO),Pc4-NWrY&AO2lFSXMk>Zq;h/axd</`7=Z&5c'}>PI132ObPABiLe~1v1B-&>uuZ=:\"[5P@qgfR&_naJ?9T}&7?7YNVcF&7{cle:[;kO0|sqL&?ho\"/t#l\"Qfqy}:yCL&,S<C &3R$R%W\\SJ\"u#+M#.Hh)0hRH9&3-x!J7m]l!wb+7++O.=?e%D*&1o.iEPhkgO4L3]7&eS{+5zP(&D>{JG/6I*+to`&AmnyuDI;&F&8bsC<qq!/AkTri#+yB/)Sq,,&5T8\\$TpgkPTHfv,&i7f#VsT3&4-pB<71)y,)F^O:lOP1/~ {{&DM:@31/QA.;>3eGmu9h5^GJ5&:YM`@BTzr?`-RZB4Y=t5+!Hn&3{N;IHN_jA</`S.F+ZE4v61-&3hxZ-nCO9+X0VW0ti#\\Ghb`j&<t[z6`o6:R.ZX-J6Zj:!%E>F&AI:CN/W}pCi|d[=;!f!\"'}ZE&3;uY.q7=9=|xkj'gx)oESozc&9e5q@BSSp!NVAS(g1N:6xyHF&8pR6NC-V4NS)x?DQn ];;4\\P&@C2}O2Hh}G< y`;+u,E/-fH^&>%TU2.?8eIsR6O7A&[='qq5a&3}ar);rs <^^\"cL(gv);nB,6&@$$=(%P\\@+Nww\"2uq|,C;]Nn&1v;@.q8)|S;LdC&mr2e<pw6E&1xZQ)c%d)%!`6*S<\"?$N<aXv&;}.OC7M=v=(x;1\"X|H@B/2!9&B#mp,DH[e) +KW:E5@t:jq_W&CJT0CK\"OtDQvN1(XY{0KQB<a&<2ptHE]YhSgV`1S<2<1+w&6l&8(`5)OM[nCadM*J/><A@Pl/7&;0'K)OL^x\"!Fw(SZoi_D^<o^&5!rI ]!]N/16pt>d^=cMeJim&4'M+Io`/4<a\",ACd,VI*DO4t&B.s/8fQw[CFAn~8F9(;B/j%?&6<7/%k97IP7KXA;gYdU/.gRf&=Wq&8z':*T^#-'A?O$q XCe}&9?`/HE]Xi#K=L|A{zgeC $ET&>\\87MgHDB2 DVz9Yh^tISe+U&5{keEPebQ>^JXlO}6\\r'I!Kw&C!lFPo~N<5B_=ZL^DNZOq2Hj&>kn;'Ii\\6NowU98Q&_PS-M=a&<l(INVgE`)BXIa?;onY!xs4p&1fl @}5)JJ%O=JFqUg{SrNo@&5XqL*>e-](YB4+MD\\?xGK6+|&80#v5qV,6:V<.hNSR%V3<-7M&DDu7><r?84.qBB5o=<WMfE]~&63CJB4^*l>BiucOYUq$9.U].&4.hP4[+O6MpQN9S6j-D,fcLE&<rt5&ZP3B/$0+6QNTZA=Ii]3&2s][!sH+~ {W:ERY`jo?g(8N&4IJ 44 XV3qlBM)>*#l `!Ey&B,ZA@i]<(LS >Y@xrIm+{S|x&D325NC-81J})*#=?R=kH2FuI&@7M *>d;g)IEce'0asy*cWYV&:1WsB[k AT\\Ov#MBPq4)-e]J&C1&CFg-aBQR`u:Q:d:}*<.lB&1{K[GVFa':Z#}HNU!8|-Nv|c&1}`,Q$TX_SH=^6PAkH,!T-tg&<?QN>PIq%?6k MJu]Ht8>\"e#&@SM'Hll0X)!d{2Pg1pt-]rU*&;Iw_%Wc.=1vBd6&W+$HPFvo>&;R%_HEc'/56fNC={&=SFEZ5b&:zG^Pp!.rMM|4P9?4<lO\\8,d&D88-E)Wvh$pinv\"YLy\"O#D2+&DT63AEE9<CGA5m0fv];LJJ]v&< LN)ONPrRE>:B2M,j7#2I(&&CvkTSdvDM3}9Y;7<`]`5/P`\"&Cs|)8+jNz=<26C%`n{fQbcKM&3&xJCr/6%3mv\"&8?b_BMX*4:&4hHJQK\\}rQM\"R@40~qM+mgY]&;@1#=tbkZ%21fc3Q=>=)2tXM&@LMUFSS?4Q<|YVEX&F1 XNtg&D6c}@.~C-Nm0->H,m-B8j$e/&9;fMS*6'z!MeM&LoWAK7>__?&:2r]/%m?r?>PHg([zf=R5d;-&3m _/%m)H-6@\"!'@0Ls#5<8!&CN)[Om/*)I^{rfLyu_UAwe'?&?W-l6`nzq$kW%1?~)MAQMMh=&:c}`1f08kMpuk-&g+uI\"'\"X)&5\\heOE}@j?5dAr514IO<FR$V&=r)WA1h72TY`5o)ap>d1>[i0&A0DSQrkbW*p! =.i%J~Ldp{\"&<AGeFSSBS<(~D27`J(E8VHck&6.s7FzcC]!uy(x7wVl4CcdD1&@klFI4~$D0w2G3>gVU&*'86/&6N%Y*yLx\"2|*Pg2\\q>55B.S=&9i/H:l4U5%6b2+CGxdN*DvuB&6|X 7c]y5=FI;d11[<?O?8/(&=~]X&ZPo%,6T]5!Zc1eD#)o/&4fy[(`4=I JI%x0SPe6>@B]<&89:'7<R4ZSj?'fCCR})Kh(AG&4(+W%D+FTD[SL/,U-1+#G@PS&9{,92UIeU3+q~i(h&H 2y0yf&;Y]$9.`<yM0i:e*KKPDFwH$+&5fZ4'Il/0Fcn&h#fG>8,~Pu.&<Mc!9|y|0Q^RI0@F2*<'ekd0&C_EbF,J*).X_^^B9pB'Q0GpL&1=5%/t'[q*{E~>=[8>B;=A-w&?ivr']@pyBv+.~5iH)S&1Al(&3;Kd9|u,'7W8#C>ix}n3u,I9&;mei><m<i=Sek)JU&Eh,17r=&4b&d:E&T#$4(+:E\"G3g=EK^l&:L&dGi}w[HyF3RAWQILDX#\"N&5B|;)c%*,5[, }Bx*2<KbbYY&<[VHR'G?*0A5d&)XxwLEHT?4&CyB%Dt~61;H72h+k9sx qQb3&DXi(FST#s?wRX'Eb4>e9)KYc&7%kp&n#w%%FQ?\"Fa)h8AHot4&5uFn3kr|3#caxK6>'?>Ki'<r&6vs!SQ@#E=yO$MC\\Vr36NL*S&@Ksr\"bd,!)S?dl3Lpmt<$EiQ&><W{$hI49!>g3zSPPo:F*kig&:*Pp1?$l[JYb|<OvWK9HN]%Q&:I7{A1k?}2gxJT\"DJy/;2I2x&=W=[8R{Kd=m1vs9^7q=0A_W0&3.X@#Q{l*!xw:~Cz=vnJ\"(G/&3%b53X=O8')9OzBPO@}\"kHfu&6d&TJKF$KF1gd'1nrfoBK#pF&@TSk.6U<MJ?N7QPj$sGB?icu&=;q/Om,0t#3 8k7]lBZ&hwwO&=jnAP56;P=7o=Z+NqAQPO|H<&A YBM@@`m%yOo.0QtU@(>O=$&1`/^&n*ff)oZSGFM<6_)EmB7&AI=_#*rkr!wb)Q<&Z.|IyK^p&4a'uL)vi9?JPN.)3`Mu;/3wM&5w>{0<6?W2wQm7J4@19=W0XQ&9he'\"be7u'!/g\\?!VzdIda66&@hHA=:#8E./EF.3?^V\";'y5b&2jNC8+jIz?psoE.d{D}'\\V80&C|_iP56^q+\"_KZ8Y6gPO#r=s&27<B0<1tdS ND0-KKr#N6h4F&6\"1($A5D HW L@P2_jkS^CQ\"&Blg*/`PHG5rIkg:rO GBUQmN&1sWbF,L9J;<7+p5C~6dR68<d&9]A+(si]H%d)WG0X~dL$\"=eN&3PWI=MUBw6gXp*K}dk7@%mn4&BSFP\"(#?W)%(JiRUz?F-hWS-&7ld\"%0Ufm7q>6),C$ZkFa|?X&7Usf7<Q!Y8osJ9A(x^KHQIv%&5mV7M,gn~52ht]P~s>w-[y{!&1Tj{FSSns4n`lRFzS{zRRiU,&B`n#LQ'U|NQe4d*[D$oM0t<,&3jH5IHQY:;0bZ}4>I\"a=+ eF&AR7kQrj1l(D]@160Os|1]Id2&6A4<9.[1_(E8GxB<5.1/HXx1&?Yxv#y+jQ)t$b^T9Ws?:EN](&<H}<#Q|-]5R\"s>!EwS>#}tbh&3Amy%~p's5TE~?)v4[RFu4=;&7l[sK:Z0$3F.|V=1fGS/w%UN&3A7Q??_un5OP7P:FdF,Sk.q-&?xe4(L\\pfCU1WMPO{q3<jm6{&C?|C31.{$%9g]O1C,Sw@YhP8&6sJ,3kp;HL80NAOZ^U #LE[L&?lO42i#6v@p,E{2]IY9(3Hqg&6D`sQK`=yN5;u<4KXrO<%U83&4H1}(9'\"oD'UUp>{kM]=3/M'&CWVp9.Yfg:kpx&# !T.&PfC5&6,RbJKBaM5SFWmSFvv1EI|#w&<N\\o;[ID=4#pbx*CatJPq{?d&=7M'E=,w:R.L&\".~8zPDx[J-&B 10I4z s94@oc\"qSys#iOf4&>ef%?S;4~/<!ew/x/{s6wZ1'&AZS[@i]P!J)/q#'t,w6-b`PB&4,\"/M{#29@%Y=_RW\"4u9md{Y&B%{C-nBtl@H'>0\"46{uDN|G7&:9%HQ$UFEI3!J)25S$2N8R6R&7:}W&n$W]:DN4$){$WCD8hrV&6C0\"-3e(h+=l=j>X]:52Ha`S&<~k!M,i3{5}`8<TRR-w+DJV,&Bt1[?,,=(Qw&G\"C/\" HP1O<r&3_UH2i%n[5;T|_AZk6b%_@W(&:lhj4 F*L3 (a}&H=EHQ\\d>+&@i7'3X;VHPo8V\"O;==*G9nC\"&@cR+Gizrv:Rbq{=QD#q-y~.:&BPXQ${x<5PmA\"v$|U,-=hJ=?&3#j<C7Lkn$5wF Ms3O@;6gwn&9~%oKafw-EX9Dp6n%1\"> f8[&:p pS*5G4R)2!9I{ES>2}l)c&9,\"t=:$!-M NW@FW*JO(XQ5l&5Hq0Fg-R 6MKBC:Kn\"c1N>\"H&A5CP)(ARm/0(y'$)$~=BCSwd&3!,e=MU0bLMe8:5CY$w;p\\qA&87jDD:=yLNb/KGRub/nAF8eg&=UwQGj ^E2jCn:?Qyn%D;k]8&CT}~=a0fr;R)zv#?.3_GQ^cI&6B20?zH@g7'MR@,g,_,.[NUH&>5@ZP56~:JLMcaT#f]D6Lyb2&>?H&@V*[\\S=hTa'8CE13N:|V&49%aIHS`74Sx9$8;FSN2}APp&>#<\"+|7[g5U[2sSBl*k7wZET&<u+#6`j}(>th}^3Mf^p\"w];n&6KKk8Rz;e x`?LTU/<lP+0%K&AKCpGBoo6+tvwv-L3L6>Ow:\\&:NPJPHr]aH>Sg>4Z  $QEzUm&=3sg!sI(-EGJp` ;#0F'k$E@&9,7;H2*1u%!-G3=@6`kBQAJ\\&4mF%>)8{;FV;hpNcE+y&P23-&4mh:G}SgFKu=Yn7':N\"<\"W4H&D1@<6&.'P/9]]N#I0_S5$q~0&DY-r5]|M_(mZTH z]mH>jH+~&?(F~SQ?mr%G3`uTa2le*@ht;&86BQHlq\" GF\\>mS!\\Eu@X%bY&1KY5)c$5j6.e4U1K&]O l[V7&?\\YI?S;<%6fR0h0E);eM\"t$l&9>@2!8hy<8P~g--rRv'F`Fg*&A~*x1?'h4OtQH_IzvJC#<n|S&9ri<9.YMs<+Q\".0WFjiIx7wQ&;ZS8Bo?kV.GiqoEQ&S7;lw9C&2or<&n*e:1%]Ke?Vgv$'y~TJ&4y.'>):>:B4<ti/d\\@W-),cJ&;0 \\!_u#1!\\\\P)%4F.uD}9xY&@9K48?D[;I}Zg5EQ<W%\"X\\\",&C@(gFzaRO,V:3H;0w)E -Awn&<.P^/`N#2.C#]kLRtAq*2.l]&4p#m- )Zn g\\ 9E9Ak\\*UZ.;&2oAC%0PP-G}4*B%}Ww67;n+V&:ow.4[/1Y?V:kq5w+[pMA&LE&@|6G5#8BwOy\"qr=rU#!\"mWSv&9U?eJ7j9vE5NAo; &[8A;%sa&6eLc(sf~ 7E-!b3R0.['`h,k&CRaY%D,_91nV!*?y,r^!v%ky&B|i.LQ'3pM2CkXFfn]-7qP=t&4?A(.q8={?y_ulNRZ|$?c\"ss&D9<k.6TlJL\\0c-0^f}cFdX;^&@@)P.]^ =,$_HV2q ;XTTJmg&7?Q?,DJH>##\\a6JwLQ0#24O &Aa:^/`RNu&|@aD*mo$V(O@CB&9oZ,C#yDMOGH) MLuQyHTrYU&4e.oNVh4d>PZ7~.0*R(4=zc7&5|TX)ON/SPKN+KC&.Q$0%uYq&C]{B<#UQt2.-]nLh]RO1K :E&5 ~E2UKJE1<HEI?fO5kIe`=-&>.J~<queW kK'VQ&N~C/f(3P&A[%X56p4CRXl~>18Tiz0}oK#&3D0z<7/tn.YWl` V,QyKH}ff&47/!N/Z//RXAH=,r^3y$`?\"<&55[nS*4'2:j001Ow@]CRWBL8&@!'jAXujHL9i}l*x2\"<25txV&2{4;BH4ziL0YX8:%Fz} f/BS&?Hq1'60xk.Uhey/0'pH ZW*Q&8.H-QrpMz@Y$CE7\\z#l+!f-B&::eo#*n3F ]//L$A},*395}}&@.QSB4_&FT9O(,?k8aST\\|>d&4P qQrk{h<g;YN$EFn'6^1xO&CMZ<JrS%u4Lf^]9#_N7*q`3N&7sb!P!asI4@; XDWSqo90}S^&@W2tE)[Bi 3eA{&]+/y@uY('&2:ob@.|!S4S(C?:^= ED|^a!&; /^5#9n]S|-$qH4nh$K9f'G&84OSN/UbZ0ks`y'w4PJH(W]k&CHto(sintBdDJC*q/F|?+vIb&Bj?sC^W}!Gzp >KT/w/<f</K&Bd$AKN0qw*J7jh+!U{Z4|M%U&2vim IMNNRt)D^0Vo6kEIV+N&;<\"0@BP&+PP<Zg2e,gl<\"[<l&C\"Yv'ptn.$N5X4=msnI4ld36&5ZAn\"( [q;-GD^6To7D&D8op&<\"QO=&JfF9L@{t4TNEu6lL|m&:2o9M{\"HM\"Uar+.53]/Jd{_B&DYgf=MTet2Q'4$==B;w'|]3k&=PEJLQ&C7E2WGRH/k=w#,w?.&1ohz9B3=|&o$0Y6R3 GADWN1&Ca8(9B6j$IyN[!O L;^,8|Y5&@+/^QK_\"] GvI8.J$kANe/il&3|j5!_up>*l]P/DN{yfGEHJm&>#!~+U08**p!! 8)*FkOh v-&6F@9\"'}ZmN8:* ,%/zb$U=Np&>V;\\4[+BO5ZX2(&WRB?I_=I~&CN7N<72`U'm&SYRGkKSHUk6V&4{7^2Ax*QN]e<a6m2@c(My)V&>^2Q9Ug)z&cO`BJGJ,=;LQ,f&9[QH8z%k#)poc\"@jy<+@b5JN&5NlD$-a:f&4knzJh$|49[{I8&3Qd2:l/(C4}WnTM'O<eCM,q(&@+beQ$R5CE?O[!$wM~bPd7~;&>\\Xn\"v;OH%Vl%KNk-Iw,@yeO&:|Tq;GrY@6<rYc%.a|b1c2D4&6K!E6M6*tN[Pcy(2#+0*BcB7&BvFx'\"`I(Pku#T%}L J+T^P)&?S^C,DED:GWvI&6DmnM(25Qv&:`JPQ8,MT)-23/MN0JYGX7ln&2:!DDaKLeR4{<a9^kUm0;-AC&=Yk0,DIJ>4Lmw>CdCQM.V`w#&5l\\#:l1:W&3+'.*Zo[:TG__#&C#Sa<#YLx/@<FP:H=jy)9*VB&=<'\\']@4y.{-_YO',_IB\"rPt&>cL!5JFUcKN)DC4.|K'PRG{u&<Z=7QK^$dFdmM`(%I3%=DwJ%&C2]|%0SVI<@.]h0%RRS0v,KO&=q4b-ZkNB6bxtK#S(dJB*1i+&=Q\\23kt7.;Lg\\GCOEL1) %P~&D!|M8z)xpD'N<P3CBGS6Z)TT&A]NpG}P{z0]$weT/Gi;<,3TC&9[w/\"'|aJ&TQCjG|3!A64@SA&;zY%7c]k_E+qF.Ns[{C<oqbq&8&f.J7m_2 F<w9FU@o<Fv>#7&8%o,DMqB;8>OKlI\"!~49Rz|E&15t|5JE3aG*{[.*(O-z7?m;<&Cm\"d.\"z7aL5O?@Csl+-F4e/B&?k+\\/`RH['\\)L@,ivFk-=V2|&44^D=&Lo%2.CK7Elq$XT&%~c&: wO$-a!+7)6TJ$&iBYNO`+&&>`@kN/WEDM>Y]]$1 f1SK=(r&<:,R;o\"FU:ur3b'G|DFTbP49&:\\.>-3e.V+0t)h8u\"F?A61$E&:XG8)(B#wB-9nj7dv9N96XHB&>ZFIP58Vj?D7#{HNm?v&H/+&&?2]s=:!Ub?m-!0Sle!s\"cmR]&57{aKN1[3(cv?2?Vp$IK8qOr&:5vuC7L|TKiw[qBisy+6GbKZ&>8m+?S7J`Jl3<`5[+)b+A&Hh&2*@VRNS469n3qbGIISJKP^%2&@ ^$0vw]S6QtRbQ~n@}L.MtP&4`[^G/88|(b.=yL\"~:P1Qw8I&AD26(9&BAIx]gI/nEZR%>E@}&5pVA8+nN?&L@FD4gp[\\ >O#`&:=]8);r]VFz`;^\")U,<)^,i'&?iAg*R=~1\"us!B)o-7N@f]U|&>\\`A+.!JP>Ob*Y@[7sU dmIg&41-\"1?!RT4D?s2#,1*@73w>R&5G';Q$UpwG^yNOL5S4(F3uFj&C*5<Du%m,Pf=yn$<uCD&\\kd=&5z wC#v.}Ql;QF;pYic\"WtE4&DXUiAlPf+8*ba+5hS'eL;:XO&2{v^2i%ilGAfWD5`a0x.gEA#&3:[*:X^$|E)N9uJO)*d':XDx&9!c^;GqW.<@Z5MQbcD0DX8Tv&=]:i6`pW]*W(dU&(O8i6]N93&8[fd-3dCh6)K/-Na7a;Ob~Pt&BDQ7?zC'`RqOO7<}6+4!tcn4&>]^W ]\"Eo/+31I*i;_!F}8i-&2SrwN/WmG&VHy>G9\"XFN{I@B&><\"J9B5)JNA;{`3\">Ds;%~sX&Bk~7/9A4gR<g~};6%!U(sob0&>;q'G/;Hy3P7Q2:$;J7#ACA\\&7'm& pWF!\"jU9}*IGND3^ b:&2cA!>c~e,G9G$R=eFz:+K =U&<XwG?foK/)|okE $ZX@!z/u:&3{^|-G5_5C37HcRt{u:?(kZr&CSk`=MT\\{:)t0lF\\ZsM$|j`c&=i`'AlMIoCIG:7QW'sPS{h?d&8`fD>wUkt;`[_95t\\i*;wgTL&82J<Rb(Z@F9!Va\"i24g=8VnV&340' \"<qi?-i,.OhyvTA*bbg&A)seCr2H0RQ>BY\")lU.QCS0p&7nMb?zGb#TIq&s/:yue$KtzT&B2K>C#v9\\6+uPp;|Qxf0 o{C&318^Q$U.12]~G[$%4IT>GAGG&:dnN(L^*^Kp9@{)tbB)?jtI/&2A([&F{GI8`u1G0R,PD7i_t3&4SB+C#u{*9PqH5)_9u0E.%;_&?Z|W6M63b#(5EzNPq?.KM?Sn&2!_\"B!#G1MZP,eSE1ON*{/;>&?C]WC7K)$<lrbQ+stK]4ao_@&6Icd&3BMlBW=cy+5{:g1b\"q8&D6bn8+n<'OC&1*0:H` /;Jbt&2&X9T@YzV#FV6rL$tKML4*n+&9vMrP5=7w/{'UI,b/I.FMSy<&BII%2UN|'G2K6L.2F(d6Pd0>&A=|y!sG(>1$e>=9L]$X)4m'|&46H?<^<m5:XPg# VD9I2Z$-|&A*:)%~i%2&JHrb27Xhs?$jd.&DA+d-Zr*$R'I V\"H$[{0xCd9&Cc[>2|Z.s.g+)]%2y?q8Q<I^&CvOb5]}9Z?Fh`F ~kbS(Td%;&BszfL=M+r,6!lg(aL*u)>[<F&:Q WSQB~E\"?}Vk6qSCi2ig*S&:Xmt/t'T*-)2#N7v\\UVEG0a-&9j>+:XWYR8@)xi![DA5I9-)(&?{5g>cygM9+)0P!\"3<H'b,Q}&:9&pSxK[X$uIl(I+<MqDw|CM&4yyLCK%) 'T&~yO.0bO'R>o_&8 Vp)OKt%M</:]Rj#cv.D$`\\&4%?&312N;$>)D[:3 e<DZ!8^&CzZH)OJN;R;~D45kkQZA8\"?e&<U1@ 5xm_3TR._.l:Y;5A_X`&7PZB1yj_n<B&0y!CA0/,ls7J&75}p<JffX:Ey/q,M'X0&Bw+ &1c'r;4;'q3;vw.$oT&;4W-[L&@&&0DMs?F7Jd+S0>:$v> 2*,&<i|#!_v;^@o|qd!E{PWC&\\Mm&7<CxGBs7k:{ut?52kN^H$m/+&9{{VNj:#>T)J-q4X2]-6hiEd&7FUZFz_R+%4y/n.qA%%.8D) &;<h ,X!R{PcG aG2:_nT7QUJ&AdNZ0(`_7B8f']Azz2/Sl/T3&7*b&1R\\T@=I]8}HV#bK \\J3%&;Dwq(`40h.qPb%MLC#=Nwp$C&<k2NGi~m`&c9r7&@5\"E,@(ee&<e'/5qRr=L0YX$:>D^\\!re<B&='A]%W]|A;i]Q) \"S*W L&u(&C+~l\"v<N@\"J~6\"<#Avz#4x(v&;8cH$A9v:0\\,m\"%2SYq=16lm&9L(L/t*3%8kQRSDR0s/0orFS&@G07;[K\"!'80QSTE`%t?0F0T&?WI\\Q8(6q/krQA6bP*DOQ|PX&Bc1nGVD'&>2d|9P7*gbF44)h&1m~,$hCcV@>n^{EuGFMNIvuy&A;$07w3D?8MT~k.[X:-S]u1H&:*FyRb+s8JEY14J3['3$jQGE&:P7=-G6A';@&3D0K<eB:e^R,&?60~SxNk]12\\xc1kbG]7N)C^&B=L,%Wc7& 7M1SLbKy\"P6\\qv&5}Db(sfNR)07^GO78u#A*t9f&@^mX=&GNOG\\#U.*11$XBY;$2&9:wU.6U^<4JvEIDkag+T'J&>&9[;V2UMNqK\"<P>01S ,%+n|@&CDv;DMuEp)js=.Fm`<!&\"Fx=&:EQY<#X)'4K%ux?-x!U8N[&3&5/aP)OLWuGbhXA14JtkNQ@lx&D<+=)c!EpS+V>8+q};B<-ZJd&B?03CK!j7OifS&7PmS]7l_>~&5Wcq \"At8.[@n <HtJ`JGTjG&2SJ\"JKEh_C,_w+DSJsv3:V_1&CfWp']Cx~&LV1lQFW{7FgY([&:H!d2.?^BBtIE\\%5c[F:H2q{&; +m>c{xv=1#\"'<hpE_#@ZEz&8q.B)vWRx%GfS&-;u<s=\"<`s&:C\"}6tAph\"@|}[IY`YGINyP&&;F3M 5rYB7{k(Y26m=25.7)@&:oX`N}tc[HcZ[>1ESCBM&_<e&<pxwJ$7'%)EOCHJ1].V?mjX*&=@+fR'Ck1Cg&kj5E{H;=Bmjg&7lj=Ed<v74Lmx(;=F1+3`<dv&?q<Q)(>1DM4;?5)FSU}Loheu&71EYBo@zvF]c,fM+{5VL*;n7&C7Bt2.;oN'+k+$LIE,BJj7c+&:2l.5qUGLAdno.JX}$3%\\q3/&2KxCHY8OF#+|41>a0(9Pz^/!&45;y&ZP!c9pOd.Fwb?LA]5J?&<h3\\)(>Dt8|rxX'(DQl?C@3E&2bV8\"O.VbMgl];.vcR5Rj(uq&27E!$-_6JF'Wwo9$ (1GFFwG&=a}wQK_IT%uCcr*8p:VH`~='&9RSC:E%\"n'zC$q\"14ha#Q^l?&=b;`H2(i[)8{NA7m;A:NhV>.&3K)B$A6XX@?u=HDc<$eJ@g\"I&;^a}.]]h*3UQVg1u[+R4`,OJ&@yXj'px'%(U'V[Dy2B#F@1q>&@lZm ]$+IIj{w8+SC)L@}jMk&AfT@.J&;$#oDy(Jcl4? MM52&@~H<+|9o1QR5>qT7M!u'fJ3Y&A,Tg>c|voM[{(GKs7O>5}3/>&@m?\\C7NX-Q8~~mQs5[FEm#{h&8i-x.\"|u|1[~L%E2,I(8JmH*&5,+2HllJ52uDM<8_+\\v)Bz3Z&8EisK:]X5:{QUP1L8~_F,?r%&1l>G.J&7*'jbIvCZbbU!8>`v&1%@xKu??<-+yL.)|i5=7aw6+&=q=*Rb%vZ=f6){I-'-h!i|9+&Cy@X-G7FbRi[ScKj[9[,0>j&&=L59Dt}paE%3])\"L3~3+Ot#=&BQIKAXuywEL9=\"NR05'5cy|-&DL.?@V*6=0~Yi@#I`9=T_iVw&@&#0Cr0g/-YlF^*%jo~>Vx%t&;O'h#>G(~I#@l,H608tC$70N&7oB%7c`!P5AQDrM7rMC&23}F&Bi5-KN2B=M4uFm+Q-w.9rw,@&2TwS.\"zw;S;[7_ W/B(+|@Fl&4e\")M,e=*.X%Vq1=`M7K7RWT&CBMT#*pP`AI6E:3rzz}=O+)4&5e01\";YvU4_T\"R<y-v$=^$r$&7E1TLx1of!cuA$?[[\\;;a*9/&Bq92!_rbDA_7fiQ,wc%5[UdV&57ZsIHQ+7Oe=D#\"aE{3>mVl%&:C.iLx3_b&rU2T8_bwzFCF:>&5N7hJ$9 e6%qqE\"hrZ,K9Hk4&2ZI4NC1`;2*j/9>%TF7':{}c&8_,t&FzWE2!<dV0Y]OY7E~>A&=i$)!8id$P]CA))y.NNQP~B}&6?|e!sLEb$9mfK5@lqn2V'Tz&:(X_&ZN<4?Db[jN()$S*3[j{&<GLR)v[#xQi'S&%dG.dQ5=]\"&AE;wE)VqL%Y[f7GSZgWJWtm~&6Ye}AlLj@R[\\ai6kyT.R00|s&;>_b%D*_xC]fsG$]~*C'7s].&2ubhLd]s<5}4bo<R6w5Di<V_&6?|H)vY$*<@'DGH3b:a<T\\vg&8S35OE|xaFbJAP0AG|$'gur-&:_nTNVaK(1]C0ODopHa@<\\Ys&<[:.4 GO0$B.7 (&kN_Ct\"nv&1|v19i=`8;q;ax&^4$&N;A;>&9Q.BG/:U>$9B/4'Ran6@?Ta8&A,C#LdW^MFp|%+&{fT!Rz/j#&5:\\5#*pcr+P<[\\E,SHZ:O<*+&=u29I!DyeD$m.>N}>{j0:6;z&<Zx3\"(!.J&\\x0%*_Q{]>_.N:&CzeJ(9'*@+* V+.]T9R9}EbK&4_kt><poQL~#X`C1%|#@c5|B&;r&9B[lm]JB/G..Ixp1: b$n&?i\"\"-3b@.=z\"qy#u4@|(#L|C&:a']SxQO3>6xB4,` w)=*rYV&Cq|_7({YeLM+1*GEU?&I'Wx3&>]9UGVI,_/\"\"l?,@3g&7!cjK&4zL$Fg/;*%0t=h<:e^uSgU%#&5aC})OLi-- c T7!8K{NWoZ &6[XAIo`X+FJnP[2VLyo'*NBb&:CCl8?A^;0$yvNL,'4k1y7_~&;(Q:%0P7}IakQg*NW$//PhHs&7srgSQApWNPm''En+8tMq:8X&>H0j$hGR>HP$^\"<.z!7JJ^n4&6guqHY8z@42`Jp@Yn9\"P@74&&AYvW(L[G$Ncp6(67`XW6?t!{&5i5*F,L0r4-Tx %3.'E#|F)2&C%UXHlk'SBCn _#O[H771=7L&CF,o(sj\\\"0sv/<FU=yI*Q|Oy&7liv+ATr_ u(#./IkG4Ov4!|&8X(H*es'P8%^H7HzGKT%uWyr&2ai_DaHK5I$1`h=m~Vf,{}!3&B`UI2.=|&M_(n*C6e&2BC$hu&4L0l\"O-Ss=f'WOB'a')HbO`<&3KMAI!GY@H%Ebi(z+in1|A@Q&C//sB4_2Z8671=(FI%X>P?M[&4a_g.6U w-g8LV+3,0j)oY3.&9P:z?S7931,`P|ENwGw%m]D0&A]t'/%oaKNR1kf%%LpB%p$Bo&:.UQ#>Duu,H%SeKuw=nO& zs&CEHm*>d];;n~q 7V(*_#[V))&3S*nGizIOC{0Xo8 W`o:N_?|&D,q)AlRf|*`Num,'>ojLZsrS&:M}l*yJ@X/eC9!>IUR&#P!f>&8F*I>)9`\\G$(&z Nu{RG&+{~&@=wX<^8~fJ|k%^=a+xO;RQps&CKSj=:\"2/)rBydM^\\}P5,Jk(&?,cZE)[CAM&R7d!w{c<1zYvo&6vE{-nBz4BBXmCD/\"ZAK9eW5&9DAz3X=>aQZ0RH(D;2Q8I']j&?!rhL)y.CJl{u6/<1hBC=4Dl&1X=@:l4R95`xuA&gS7#P1Aj9&3x^\"$hGGdO\"$/}L3'%#5Ar6=&>7<4=9~,v I%B1LuPQhBNmAc&6J#aSxR-a;xj?u>&t2dDR,7J&=0Dk$-d2uBIc-_4'&<g0O{ K&8a}Y@i]w},;&&[Ko1zKM8mG[&8I.A<Jf0x>wBsH#dP#2Al/wg&50jcJ$6?RCgv]q1+l\"NTC!%w&=ILmJ$6L6Nh^cPH{~[N$enyU&=b^E2.?*cQgj)0-y^kW3{dbT&?sG1$A<'FGglpB.?gFN4lP$r&@Y. 2.;O?;\"82$P[/{U(\"x;1&;W4a(siZXE*jf5'\\2$eCVd,!&CAAZQ$SH)):]5LNw/7/9GdsT&4TuD3kr=9Sx6bNCas&oG*|4g&5 :<5qRl|?fk:oJZ/a G7DO.&?{B3&3CL.9o:R*?OV8P;=d8+&=cXf4[+m,KP(2z-,I4hKd3n{&=.eMI\\'HL,\\S^W#=p`(&#;2B&9#]sHE`)3*}ao~=jo.j3.Xl1&C{gr(%NB`#3~`oM[cYB2QA:f&<-;8O2Jn\\-m<*t0epY\\=)5G)&5\"ph;Gqw9=p!WC>2:>6,/E'Y&9m;_Fzd+L)CB%K@O)v:0>5e`&42r!Po~Yw,ImT[Oz0wPMj{^v&<[D$ 5vVC5j@'1RN6:>7Bn-y&:j W4GXjmOJc@pG#zff\"z_\"5&DG,I!sJ8i=]uW'7EiTWC>b<7&1W+;,DJ6o<y\";HL2\\<D\"p}`H&Cb_}LQ%F84r@P.",
+    [7] = "He{(:A=P9JHR.~0Ci?OV",
+  }
+  local _maskVvHUof4Ey = (_nuvoVM[3] ~ tonumber(_nuvoVM[5]:sub(1, 2), 16)) & 255
+  local _lNd83w3L8vm = {}
+  local function _stepFLAxtIXxN(_opcodev23grdBUb, _regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    if not _lNd83w3L8vm[_opcodev23grdBUb] then
+      error('NuvoVM: unknown opcode')
+    else
+      return _lNd83w3L8vm[_opcodev23grdBUb](_regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    end
+  end
+  local function _stepNs279zQQH(_opcodev23grdBUb, _regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    if not _lNd83w3L8vm[_opcodev23grdBUb] then
+      error('NuvoVM: unknown opcode')
+    else
+      return _lNd83w3L8vm[_opcodev23grdBUb](_regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    end
+  end
+  local function _handlervDB3DomFl(_regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    if _regsezIjHizmC_[_argBMsfVD96v] == nil or _regsezIjHizmC_[_arghIAAUmyUe] == nil then error('NuvoVM: CONCAT on nil') end
+    _regsezIjHizmC_[_arg2TeNPzyDQ] = _regsezIjHizmC_[_argBMsfVD96v] .. _regsezIjHizmC_[_arghIAAUmyUe]
+    return false
+  end
+  local function _handler19kFMqimu(_regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    if _regsezIjHizmC_[_argBMsfVD96v] == nil or _regsezIjHizmC_[_arghIAAUmyUe] == nil then error('NuvoVM: POW on nil') end
+    _regsezIjHizmC_[_arg2TeNPzyDQ] = _regsezIjHizmC_[_argBMsfVD96v] ^ _regsezIjHizmC_[_arghIAAUmyUe]
+    return false
+  end
+  local function _handler5IeCkUQtW(_regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    if _regsezIjHizmC_[_argBMsfVD96v] == nil or _regsezIjHizmC_[_arghIAAUmyUe] == nil then error('NuvoVM: DIV on nil') end
+    _regsezIjHizmC_[_arg2TeNPzyDQ] = _regsezIjHizmC_[_argBMsfVD96v] / _regsezIjHizmC_[_arghIAAUmyUe]
+    return false
+  end
+  local function _handlerHZZ5Z4bWw(_regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    if _argBMsfVD96v < 1 or _argBMsfVD96v > 2 then
+      error('NuvoVM: constant index out of range')
+    else
+      _regsezIjHizmC_[_arg2TeNPzyDQ] = _constsScjIwkSFl_[_argBMsfVD96v]
+    end
+    return false
+  end
+  local function _handleryo4tbUPDl(_regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    if _regsezIjHizmC_[_argBMsfVD96v] == nil or _regsezIjHizmC_[_arghIAAUmyUe] == nil then error('NuvoVM: ADD on nil') end
+    _regsezIjHizmC_[_arg2TeNPzyDQ] = _regsezIjHizmC_[_argBMsfVD96v] + _regsezIjHizmC_[_arghIAAUmyUe]
+    return false
+  end
+  local function _stepNLgTylmsP(_opcodev23grdBUb, _regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    if not _lNd83w3L8vm[_opcodev23grdBUb] then
+      error('NuvoVM: unknown opcode')
+    else
+      return _lNd83w3L8vm[_opcodev23grdBUb](_regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    end
+  end
+  local function _decodedV7mamWbs(s)
+    local out = {}
+    for i = 1, #s, 5 do
+      local n = 0
+      for j = 0, 4 do n = n * 95 + (s:byte(i + j) - 32) end
+      out[#out + 1] = string.char((n >> 24) & 255, (n >> 16) & 255, (n >> 8) & 255, n & 255)
+    end
+    return table.concat(out)
+  end
+  local function _handlerj3Sp2WJXg(_regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    if _arg2TeNPzyDQ > 255 then error('NuvoVM: invalid NOP operand') end
+    return false
+  end
+  local function _handlergze59x8Or(_regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    local global_name = _constsScjIwkSFl_[_argBMsfVD96v]
+    if type(global_name) ~= 'string' then
+      error('NuvoVM: invalid global name')
+    else
+      _regsezIjHizmC_[_arg2TeNPzyDQ] = _ENV[global_name]
+    end
+    return false
+  end
+  local function _handlerOQFh2WzPa(_regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    local call_args = {}
+    for j = 1, _arghIAAUmyUe do call_args[j] = _regsezIjHizmC_[_argBMsfVD96v + j - 1] end
+    local target_fn = _regsezIjHizmC_[_arg2TeNPzyDQ]
+    if type(target_fn) ~= 'function' then
+      error('NuvoVM: CALL target is not a function')
+    else
+      target_fn(table.unpack(call_args, 1, _arghIAAUmyUe))
+    end
+    return false
+  end
+  local function _handlerjsauSKjCe(_regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    return true
+  end
+  local function _handlerwV21UDDK1(_regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    if _regsezIjHizmC_[_argBMsfVD96v] == nil or _regsezIjHizmC_[_arghIAAUmyUe] == nil then error('NuvoVM: SUB on nil') end
+    _regsezIjHizmC_[_arg2TeNPzyDQ] = _regsezIjHizmC_[_argBMsfVD96v] - _regsezIjHizmC_[_arghIAAUmyUe]
+    return false
+  end
+  local function _handler8ckjxBiCc(_regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    if _regsezIjHizmC_[_argBMsfVD96v] == nil or _regsezIjHizmC_[_arghIAAUmyUe] == nil then error('NuvoVM: MUL on nil') end
+    _regsezIjHizmC_[_arg2TeNPzyDQ] = _regsezIjHizmC_[_argBMsfVD96v] * _regsezIjHizmC_[_arghIAAUmyUe]
+    return false
+  end
+  local function _stepWNyMDRKIY(_opcodev23grdBUb, _regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    if not _lNd83w3L8vm[_opcodev23grdBUb] then
+      error('NuvoVM: unknown opcode')
+    else
+      return _lNd83w3L8vm[_opcodev23grdBUb](_regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    end
+  end
+  local function _steprAVj4WK0h(_opcodev23grdBUb, _regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    if not _lNd83w3L8vm[_opcodev23grdBUb] then
+      error('NuvoVM: unknown opcode')
+    else
+      return _lNd83w3L8vm[_opcodev23grdBUb](_regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    end
+  end
+  local function _step1RRrekHXg(_opcodev23grdBUb, _regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    if not _lNd83w3L8vm[_opcodev23grdBUb] then
+      error('NuvoVM: unknown opcode')
+    else
+      return _lNd83w3L8vm[_opcodev23grdBUb](_regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    end
+  end
+  local function _unmaskK0j9GR1lB(s)
+    local out = {}
+    for i = 1, #s do out[i] = string.char(s:byte(i) ~ _maskVvHUof4Ey) end
+    return table.concat(out)
+  end
+  local function _handlerKOrJeBS0z(_regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    if _regsezIjHizmC_[_argBMsfVD96v] == nil or _regsezIjHizmC_[_arghIAAUmyUe] == nil then error('NuvoVM: MOD on nil') end
+    _regsezIjHizmC_[_arg2TeNPzyDQ] = _regsezIjHizmC_[_argBMsfVD96v] % _regsezIjHizmC_[_arghIAAUmyUe]
+    return false
+  end
+  local function _stepUqcfOkmbq(_opcodev23grdBUb, _regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    if not _lNd83w3L8vm[_opcodev23grdBUb] then
+      error('NuvoVM: unknown opcode')
+    else
+      return _lNd83w3L8vm[_opcodev23grdBUb](_regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    end
+  end
+  local function _handlerqLmaftQRL(_regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    if _argBMsfVD96v == nil then error('NuvoVM: invalid MOVE source') end
+    _regsezIjHizmC_[_arg2TeNPzyDQ] = _regsezIjHizmC_[_argBMsfVD96v]
+    return false
+  end
+  local function _stepCRe1VYXOk(_opcodev23grdBUb, _regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    if not _lNd83w3L8vm[_opcodev23grdBUb] then
+      error('NuvoVM: unknown opcode')
+    else
+      return _lNd83w3L8vm[_opcodev23grdBUb](_regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    end
+  end
+  local function _step9jI0z9pvf(_opcodev23grdBUb, _regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    if not _lNd83w3L8vm[_opcodev23grdBUb] then
+      error('NuvoVM: unknown opcode')
+    else
+      return _lNd83w3L8vm[_opcodev23grdBUb](_regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    end
+  end
+  local function _stepzZR0Bxe3i(_opcodev23grdBUb, _regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    if not _lNd83w3L8vm[_opcodev23grdBUb] then
+      error('NuvoVM: unknown opcode')
+    else
+      return _lNd83w3L8vm[_opcodev23grdBUb](_regsezIjHizmC_, _constsScjIwkSFl_, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    end
+  end
+  _lNd83w3L8vm[128] = _handlerOQFh2WzPa
+  _lNd83w3L8vm[122] = _handleryo4tbUPDl
+  _lNd83w3L8vm[190] = _handler19kFMqimu
+  _lNd83w3L8vm[46] = _handler8ckjxBiCc
+  _lNd83w3L8vm[218] = _handlerj3Sp2WJXg
+  _lNd83w3L8vm[49] = _handlergze59x8Or
+  _lNd83w3L8vm[208] = _handlerHZZ5Z4bWw
+  _lNd83w3L8vm[152] = _handlerjsauSKjCe
+  _lNd83w3L8vm[57] = _handlerqLmaftQRL
+  _lNd83w3L8vm[110] = _handlervDB3DomFl
+  _lNd83w3L8vm[173] = _handler5IeCkUQtW
+  _lNd83w3L8vm[35] = _handlerwV21UDDK1
+  _lNd83w3L8vm[112] = _handlerKOrJeBS0z
+  local _rawr17iHk2CN = _unmaskK0j9GR1lB(_decodedV7mamWbs(_nuvoVM[6]))
+  local _constsScjIwkSFl = {}
+  local _regsezIjHizmC = {}
+  local _posvJtY6DxJ7 = 1
+  local _constrawCj0gX4p65 = _unmaskK0j9GR1lB(_decodedV7mamWbs(_nuvoVM[7]))
+  for _ci951EigaQy = 1, _nuvoVM[4] do
+    local _typesrv1vBhhZ = _constrawCj0gX4p65:byte(_posvJtY6DxJ7)
+    if not _typesrv1vBhhZ then error('NuvoVM: truncated constants') end
+    _posvJtY6DxJ7 = _posvJtY6DxJ7 + 1
+    local _lengthn1jf5d1fj = (_constrawCj0gX4p65:byte(_posvJtY6DxJ7) or 0) * 256 + (_constrawCj0gX4p65:byte(_posvJtY6DxJ7 + 1) or 0)
+    _posvJtY6DxJ7 = _posvJtY6DxJ7 + 2
+    if _posvJtY6DxJ7 + _lengthn1jf5d1fj - 1 > #_constrawCj0gX4p65 then error('NuvoVM: truncated constant value') end
+    local _valuexFhbPURzq = _constrawCj0gX4p65:sub(_posvJtY6DxJ7, _posvJtY6DxJ7 + _lengthn1jf5d1fj - 1)
+    _posvJtY6DxJ7 = _posvJtY6DxJ7 + _lengthn1jf5d1fj
+    if _typesrv1vBhhZ == 1 then
+      _constsScjIwkSFl[_ci951EigaQy] = _valuexFhbPURzq
+    elseif _typesrv1vBhhZ == 2 then
+      _constsScjIwkSFl[_ci951EigaQy] = assert(tonumber(_valuexFhbPURzq), 'NuvoVM: invalid number constant')
+    elseif _typesrv1vBhhZ == 3 then
+      _constsScjIwkSFl[_ci951EigaQy] = (_valuexFhbPURzq == '1')
+    elseif _typesrv1vBhhZ == 4 then
+      -- nil constants intentionally leave an empty register in the pool
+    else
+      error('NuvoVM: invalid constant type')
+    end
+  end
+  local _stepseHM34AVAk = { _stepCRe1VYXOk, _stepFLAxtIXxN, _step1RRrekHXg, _stepNLgTylmsP, _stepzZR0Bxe3i, _stepUqcfOkmbq, _stepNs279zQQH, _step9jI0z9pvf, _steprAVj4WK0h, _stepWNyMDRKIY }
+  for _pcXMpp5g7nS = 1, _nuvoVM[2] do
+    local _byteposcsDYUeAbS = (_pcXMpp5g7nS - 1) * 5 + 1
+    local _opcodev23grdBUb = _rawr17iHk2CN:byte(_byteposcsDYUeAbS)
+    local _arg2TeNPzyDQ = _rawr17iHk2CN:byte(_byteposcsDYUeAbS + 1)
+    local _argBMsfVD96v = _rawr17iHk2CN:byte(_byteposcsDYUeAbS + 2)
+    local _arghIAAUmyUe = _rawr17iHk2CN:byte(_byteposcsDYUeAbS + 3)
+    local _argtORV61h2D = _rawr17iHk2CN:byte(_byteposcsDYUeAbS + 4)
+    local _runnerEpdU63im9 = _stepseHM34AVAk[( (_pcXMpp5g7nS + 9) % 10) + 1]
+    local _stopP8hSDIz8A = _runnerEpdU63im9(_opcodev23grdBUb, _regsezIjHizmC, _constsScjIwkSFl, _arg2TeNPzyDQ, _argBMsfVD96v, _arghIAAUmyUe, _argtORV61h2D)
+    if _stopP8hSDIz8A then break end
+  end
+  return nil
+end)()
